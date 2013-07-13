@@ -7,10 +7,12 @@ import json
 from pyquery import PyQuery as pq
 import requests
 from urllib import unquote
+from urlparse import urljoin
 
 
 PAGESIZE = 10
-URL = "http://www.mediagaon.or.kr/jsp/sch/mnews/search.jsp"
+LIST_URL = "http://www.mediagaon.or.kr/jsp/sch/mnews/search.jsp"
+VIEW_URL = 'http://www.mediagaon.or.kr/jsp/sch/mnews/newsView.jsp?newsId='
 PAYLOAD_BASE_STR = "reQuery=&collection=mkind&searchField=Subject&sortField=DATE%2FDESC%2CRANK%2FDESC&dateRange=all&startDate=&endDate=&pageStartNumber=0&prefixQuery=&login_status=logout&dupMode=&treePrefixQuery=&providerList=&subTab=&treeCheckedNameList=&query="
 PAYLOAD_BASE = {}
 HEADERS = {
@@ -25,7 +27,7 @@ def get_list_page(page, query):
         'pageStartNumber': offset,
         'query': query.encode('euc-kr')
     })
-    r = requests.post(URL, data=payload, headers=HEADERS)
+    r = requests.post(LIST_URL, data=payload, headers=HEADERS)
     p_html = pq(r.text)
     p_articles = p_html.find('.tdsty02')
     for a in p_articles:
@@ -57,6 +59,7 @@ def main():
         display_date = '%d월 %d일' % (date.month, date.day)
         press = article.find('.view > span').text().strip()[1:-1]
         summary = article.find('td[colspan="2"]').text().strip()
+        url = VIEW_URL + article.find('.mnews_kinds_not_ori_link').attr('href')
         results[machine_date] = {
             'title': title,
             'date': machine_date,
@@ -64,7 +67,7 @@ def main():
             'photourl': '',
             'caption': press,
             'body': summary,
-            'readmoreurl': ''
+            'readmoreurl': url
         }
     with open('static/data/kys.json', 'w') as f:
         json.dump(results.values(), f, indent=2)
