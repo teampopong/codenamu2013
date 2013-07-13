@@ -12,19 +12,18 @@
 
 ## 설치 및 실행
 1. 설치
-
     * Python 설치
     * sudo pip install flask pyquery requests
 
 1. 웹서비스
 
-    cd codenamu_app
-    python app.py
+        cd codenamu_app
+        python app.py
 
 1. 크롤링 (데이터 업데이트)
 
-    cd codenamu_app
-    python crawl.py
+        cd codenamu_app
+        python crawl.py
 
 ## 만든 사람들
 3조, 용감한 남매들!
