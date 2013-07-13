@@ -10,6 +10,22 @@
 - Visualization: [jQuery Vertical Timeline](https://github.com/MinnPost/jquery-vertical-timeline) 이용
 - Deployment: [Google App Engine](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCgQFjAA&url=https%3A%2F%2Fdevelopers.google.com%2Fappengine%2F&ei=0e3gUfOrNaG6iQeV0IDACQ&usg=AFQjCNE6rL-BmWR5qPBX2MR9ZbxHi7ixTQ&sig2=jNJI8bxITbFRrkOR-nyB3A&bvm=bv.48705608,d.aGc)
 
+## 설치 및 실행
+1. 설치
+
+    * Python 설치
+    * sudo pip install flask pyquery requests
+
+1. 웹서비스
+
+    cd codenamu_app
+    python app.py
+
+1. 크롤링 (데이터 업데이트)
+
+    cd codenamu_app
+    python crawl.py
+
 ## 만든 사람들
 김장명, 송현경, 이효섭, 강철, 박은정 (3조, 용감한 남매들!)
 
