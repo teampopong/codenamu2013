@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>jQuery Vertical Example</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  
+  <!-- Include CSS for Timeline -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+<body>
+
+  <!-- Include container for timeline -->
+  <center>
+      <h1>그랬던 그가...!</h1>
+      <p>- 강용석 발언대 -</p>
+      <iframe src="{{ url_for('static', filename='kys.html') }}" height="200px" frameborder="0"></iframe>
+  </center>
+  <div class="timeline-jquery-example-3" style="width: 600px; margin: 0 auto;">
+  </div>
+  <!-- Include scripts -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/jquery-1.7.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/handlebars-1.0.rc.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/tabletop-zzolo.master-20130402.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/jquery.isotope.v1.5.21.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/jquery.ba-resize.v1.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/libs/jquery.imagesloaded.v2.1.0.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-veritcal-timeline.js') }}"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+            $.getJSON('{{ url_for("static", filename="data/kys.json") }}', function(data) {
+        $('.timeline-jquery-example-3').verticalTimeline({
+          data: data,
+          width: '100%',
+          defaultExpansion: 'collapsed'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

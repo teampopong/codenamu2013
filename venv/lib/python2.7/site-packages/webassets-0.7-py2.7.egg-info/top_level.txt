@@ -1,0 +1,2 @@
+webassets
+django_assets

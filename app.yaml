@@ -1,0 +1,11 @@
+application : codenamu2013 
+version : 1
+runtime : python27
+api_version : 1
+threadsafe: true
+ 
+handlers:
+- url: /static
+  static_dir : codenamu_app/static
+- url: .*
+  script : main.app
