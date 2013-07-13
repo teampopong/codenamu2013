@@ -66,7 +66,7 @@ def main():
             'body': summary,
             'readmoreurl': ''
         }
-    with open('output.json', 'w') as f:
+    with open('static/data/kys.json', 'w') as f:
         json.dump(results.values(), f, indent=2)
 
 
