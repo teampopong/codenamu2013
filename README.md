@@ -7,11 +7,14 @@
 파일럿은 이슈로 자주 떠오르는 [강용석 전 의원](http://pokr.kr/person/1969120)을 대상으로 했습니다.
 
 ## 기술적 이슈
-- Visualization: [jQuery Vertical Timeline](https://github.com/MinnPost/jquery-vertical-timeline) 이용
+- Visualization: [jQuery Vertical Timeline](https://github.com/MinnPost/jquery-vertical-timeline)
 - Deployment: [Google App Engine](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCgQFjAA&url=https%3A%2F%2Fdevelopers.google.com%2Fappengine%2F&ei=0e3gUfOrNaG6iQeV0IDACQ&usg=AFQjCNE6rL-BmWR5qPBX2MR9ZbxHi7ixTQ&sig2=jNJI8bxITbFRrkOR-nyB3A&bvm=bv.48705608,d.aGc)
 
 ## 만든 사람들
-김장명, 송현경, 이효섭, 강철, 박은정 (3조, 용감한 남매들!)
+3조, 용감한 남매들!
+
+- 개발: [강철](http://twitter.com/cornchz), [박은정](http://github.com/e9t)
+- 기획 및 디자인: [김장명](mailto:kimjma@mtekvision.com), [송현경](http://facebook.com/alwayshk), 이효섭
 
 ## 저작권
 In the public domain. 마음껏 가져다 쓰세요 ^^
