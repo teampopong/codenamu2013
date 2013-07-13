@@ -393,5 +393,9 @@
 /* Codenamu Custom */
 #footer {
     background-color: #EEE;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     text-align: center;
+    z-index: 1000;
 }
