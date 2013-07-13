@@ -389,3 +389,9 @@
 .lt-ie8 .vertical-timeline-timeline .post .share-popup .facebook-share-button {
   top: 16px;
 }
+
+/* Codenamu Custom */
+#footer {
+    background-color: #EEE;
+    text-align: center;
+}
